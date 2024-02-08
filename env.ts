@@ -9,6 +9,7 @@ export const env = createEnv({
    */
   server: {
     RESEND_API_KEY: z.string().min(1),
+    VERCEL_URL: z.string(),
   },
   /*
    * Environment variables available on the client (and server).
@@ -24,5 +25,6 @@ export const env = createEnv({
    */
   runtimeEnv: {
     RESEND_API_KEY: process.env.RESEND_API_KEY,
+    VERCEL_URL: process.env.VERCEL_URL,
   },
 });
